@@ -16,7 +16,7 @@ server.on("connection", (socket) => {
     });
 
     socket.once("close", () => {
-        console.log("Connection with %s closed".yellow, remoteAddress);
+        console.log("Connection with %s closed".red, remoteAddress);
     });
 
     socket.on("error", () => {
@@ -37,5 +37,5 @@ server.on('error', (e) => {
 });
 
 server.listen(port, () => {
-    console.log("Server listening on %j".green, server.address().port);
+    console.log("Server listening on %j...".green, server.address().port);
 });
